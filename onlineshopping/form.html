@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>登録フォーム</title>
+</head>
+
+<body>
+    <h1>商品新規作成フォーム</h1>
+    <form method="post" action="add.php">
+        商品名：<input type="text" name="name"><br>
+        商品説明：<textarea type="text" name="description"></textarea><br>
+        価格：<input type="number" name="price"><br>
+        購入可否：
+        <input type="radio" name="available" value="true" checked>可
+        <input type="radio" name="available" value="false" >不可
+        <br>
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>    
