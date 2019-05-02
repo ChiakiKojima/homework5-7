@@ -28,6 +28,7 @@ try {
 <head>
 <meta charset="utf-8">
 <title>編集フォーム</title>
+<link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -44,6 +45,7 @@ try {
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'); ?>">
         <input type="submit" value="送信">
     </form>
+    <br>
     <a href="index.php">商品一覧に戻る</a>
 </body>
 </html>    

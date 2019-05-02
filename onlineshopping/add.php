@@ -20,11 +20,22 @@ try {
     $stmt->execute();
     
     $dbh = null;
-    echo "商品が登録されました。<br>";
-    echo "<a href='index.php'>商品一覧へ戻る</a>";
-    
+
 } catch (Exception $e) {
     echo "エラー発生:" .htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') ."<br>";
     die();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8">
+<title>削除完了</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>商品が登録されました。</h1>
+    <br>
+    <a href='index.php'>商品一覧へ戻る</a>
+</body>
+</html>

@@ -30,17 +30,18 @@ try {
 <html lang="ja">
 <head><meta charset="utf-8">
 <title>detail</title>
+<link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <form method="post" action="cart.php?id=<?php echo htmlspecialchars($result['id'],ENT_QUOTES, 'UTF-8') ?>">
         <input type="number" name="order_count" value="0" max="9"　min="1"><span>個</span>
         
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'); ?>"
+        <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'); ?>">
         <br>
-        <input type='submit' value='カートに入れる'> 
+        <input class="cart" type='submit' value='カートに入れる'> 
     </form>
     
-    <a href='index.php'>商品一覧へ戻る</a>
+    <a href='index.php' class="to_index">商品一覧へ戻る</a>
 </body>
 </html>

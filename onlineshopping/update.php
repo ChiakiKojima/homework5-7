@@ -26,10 +26,21 @@ try {
     
     $dbh = null;
     
-    echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8')."の更新が完了しました。";<br>
-    echo "<a href='index.php'>商品一覧へ戻る</a>";
 } catch (Exception $e) {
     echo "エラー発生：".htmlspecialchars($e->getMessage(),ENT_QUOTES, 'UTF-8')."<br>";
     die();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8">
+<title>変更完了</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1><?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8')?>の更新が完了しました</h1>
+    <br>
+    <a href='index.php'>商品一覧へ戻る</a>
+</body>
+</html>

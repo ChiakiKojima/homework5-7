@@ -23,12 +23,13 @@ try {
     die();
 }
 
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="ja">
 <head><meta charset="utf-8">
 <title>カートの中身</title>
+<link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 <h1>カートの中身</h1>
@@ -48,7 +49,8 @@ try {
     </tr>
     
 </table>
-<h3>合計金額</h3>
-<h2><?php echo htmlspecialchars($totalPrice,ENT_QUOTES, 'UTF-8') ?></h2>
+
+<h2>合計金額   <?php echo htmlspecialchars($totalPrice,ENT_QUOTES, 'UTF-8') ?>円</h2>
+
 </body>
 </html>
