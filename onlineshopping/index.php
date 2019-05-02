@@ -14,7 +14,7 @@ require_once ('PASS/config.php');
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=shopping;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM merchandise where available = 'true' order by id DESC";
+    $sql = "SELECT * FROM merchandise order by id DESC";
     $stmt = $dbh->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $dbh = null;
