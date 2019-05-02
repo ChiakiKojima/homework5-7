@@ -1,0 +1,60 @@
+html * {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #3300CC;
+}
+h1 {
+    border-bottom: 3px dotted #3f5170;
+    color: #FFcc00;
+    padding-bottom: 1em;
+}
+.merchandise {
+    display: flex;
+}
+
+.item {
+    color: #3f5170;
+    text-align: center;
+    margin-right: 1em;
+    background-color: #FFFFCC;
+    padding: 1em;
+}
+/* editのスタイル　*/
+form {
+    border-bottom: 3px dotted #3f5170;
+    padding-bottom: 1em;
+}
+.cart, .btn {
+    margin-top: 1em;
+    background-color: #FFcc00;
+    box-shadow: 0 0;
+    color: white;
+}
+.cart:hover {
+    cursor: pointer;
+}
+.to_index {
+    color: #3f5170;
+}
+
+/* cart.phpのスタイル */
+
+td {
+    text-align: center;
+    padding-right: 1em;
+}
+
+h2 {
+    color: #3f5170;
+    font-weight: normal;
+    border-top: 3px dotted #3f5170;
+    padding-top: 1em;
+}
+
+/* index.php */
+h3 a {
+    color: #3f5170;
+}
