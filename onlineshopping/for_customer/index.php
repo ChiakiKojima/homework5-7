@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head><meta charset="utf-8">
-<title>Handmade shop</title>
-<link rel="stylesheet" href="../CSS/style.css">
-</head>
-
-<body>
-    <h1>商品一覧</h1>
-    
 <?php 
+session_start();
 require_once ('../PASS/config.php');
-
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=shopping;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -24,7 +14,16 @@ try {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8">
+<title>Handmade shop</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
 
+<body>
+    <h1>商品一覧</h1>
+    
 <div class="merchandise">
     
         <?php foreach ($result as $row): ?>

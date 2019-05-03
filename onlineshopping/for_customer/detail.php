@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../PASS/config.php';
 
 try {
@@ -12,10 +13,6 @@ try {
     $stmt->bindValue(1, $id, PDO::PARAM_INT);
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    echo htmlspecialchars($result['name'],ENT_QUOTES, 'UTF-8') . "<br>\n";
-    echo htmlspecialchars($result['description'],ENT_QUOTES, 'UTF-8') . "<br>\n";
-    echo htmlspecialchars($result['price'],ENT_QUOTES, 'UTF-8').'円' . "<br>\n";
     
     $dbh = null;
     
@@ -34,12 +31,17 @@ try {
 </head>
 
 <body>
-    <form method="post" action="cart.php?id=<?php echo htmlspecialchars($result['id'],ENT_QUOTES, 'UTF-8') ?>">
-        <input type="number" name="order_count" value="0" max="9"　min="1"><span>個</span>
+    
+        
+    <form method="post" action="cart.php">
+        <p><?php echo htmlspecialchars($result['name'],ENT_QUOTES, 'UTF-8') ?></p>
+        <p><?php echo htmlspecialchars($result['description'],ENT_QUOTES, 'UTF-8') ?></p>
+        <p><?php echo htmlspecialchars($result['price'],ENT_QUOTES, 'UTF-8').'円' ?></p>
+        <input type="number" name="num" value="0" max="9"　min="1"><span>個</span>
         
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'); ?>">
         <br>
-        <input class="cart" type='submit' value='カートに入れる'> 
+        <input class="cart" type='submit' name="submit" value='カートに入れる'> 
     </form>
     
     <a href='index.php' class="to_index">商品一覧へ戻る</a>
