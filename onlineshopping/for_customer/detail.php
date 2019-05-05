@@ -37,7 +37,7 @@ try {
         <p><?php echo htmlspecialchars($result['name'],ENT_QUOTES, 'UTF-8') ?></p>
         <p><?php echo htmlspecialchars($result['description'],ENT_QUOTES, 'UTF-8') ?></p>
         <p><?php echo htmlspecialchars($result['price'],ENT_QUOTES, 'UTF-8').'円' ?></p>
-        <input type="number" name="num" value="0" max="9"　min="1"><span>個</span>
+        <input type="number" name="num" value="0" min="1" max="9"><span>個</span>
         
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'); ?>">
         <br>

@@ -11,6 +11,7 @@
     
 <?php 
 require_once ('PASS/config.php');
+require_once ('common.php');
 
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=shopping;charset=utf8', $user, $pass);
