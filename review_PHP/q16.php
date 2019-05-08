@@ -36,7 +36,7 @@ $length = count($a);
     <table>
         <?php for ($i = 0; $i < $length; $i++): ?>
         <tr>
-            <?php foreach ($a[$i] as $key => $num): ?>
+            <?php foreach ($a[$i] as $num): ?>
             <td><?php echo $num ?></td>
             <?php endforeach ?>
         </tr>
