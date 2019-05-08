@@ -8,4 +8,5 @@ if ($value % 2 == 0) {
     echo $value.'は奇数です';
 }
 
+
 ?>

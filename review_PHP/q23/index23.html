@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>例題</title>
+</head>
+<body>
+    <form method="POST" action="result.php">
+        <table>
+            <thead>
+                <tr>
+                <th>商品名</th>
+                <th>数量</th>
+                <th>単価</th>
+                </tr>
+            </thead>
+        <tr>
+            <td>Apple <input type="hidden" name="id[]" value="10">
+            </td>
+            <td><input type="number" name="quantity[]" value="1">
+            </td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>Banana <input type="hidden" name="id[]"
+            value="20"></td>
+            <td><input type="number" name="quantity[]" value="2">
+            </td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>Apple <input type="hidden" name="id[]" value="30">
+            </td>
+            <td><input type="number" name="quantity[]" value="4">
+            </td>
+            <td>500</td>
+        </tr>
+        </table>
+        <p>
+        <input type="submit" value="送信する">
+        </p>
+    </form>
+</body>
+</html>
