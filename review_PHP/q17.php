@@ -11,11 +11,18 @@ $a = ['apple' => [1,2,3], 'banana' => [4,5,6], 'cherry' => [7,8,9]];
 /*print_r($a[cherry]);
 echo $a[cherry][0];*/
 
-$length = count($a[cherry]);
-//echo $length;
+
 
 $sum = 0;
+foreach ($a[cherry] as $num) {
+    $sum += $num;
+}
+echo $sum;
+
+/*$length = count($a[cherry]);
+echo $length;
 for ($i=0; $i < $length; $i++) {
     $sum += $a[cherry][$i];
 }
-echo $sum;
+echo $sum;*/
+
