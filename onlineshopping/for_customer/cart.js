@@ -1,5 +1,5 @@
 let cost = document.getElementsByName('cost');
-let quantity = document.getElementsByName('quantity');
+let quantity = document.getElementsByName('quantity[]');
 let subtotal = document.getElementsByName('subtotal');
 //let totalPrice = 0;
 let sum = document.getElementById('sum');

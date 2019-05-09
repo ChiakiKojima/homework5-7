@@ -63,29 +63,34 @@ try {
 </head>
 <body>
 <h1>カートの中身</h1>
-<table>
-    <tr>
-        <th>商品名</th>
-        <th>価格</th>
-        <th>数量</th>
-        <th>小計</th>
-        
-    <?php foreach ($rows as $r): ?>  
-    </tr>
+
+<form method="post" action="buy.php">
+    <table>
         <tr>
-        <td name="item"><?php echo htmlspecialchars($r['name'],ENT_QUOTES, 'UTF-8') ?></td>
-        <td name="cost"><?php echo htmlspecialchars($r['price'],ENT_QUOTES, 'UTF-8') ?>円</td>
-        <td><input  name="quantity" type="number" min="0" max="9" value="<?php echo htmlspecialchars($r['num'],ENT_QUOTES, 'UTF-8') ?>">個</td>
-        <td name="subtotal"><?php echo htmlspecialchars($r['num'] * $r['price'],ENT_QUOTES, 'UTF-8') ?>円</td>
-    </tr>
-    <?php endforeach ?>
-</table>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>数量</th>
+            <th>小計</th>
+            <th></th>
+            
+        <?php foreach ($rows as $r): ?>
+        
+        </tr>
+            <tr>
+            <td name="item"><?php echo htmlspecialchars($r['name'],ENT_QUOTES, 'UTF-8') ?></td>
+            <td name="cost"><?php echo htmlspecialchars($r['price'],ENT_QUOTES, 'UTF-8') ?>円</td>
+            <td><input  name="quantity[]", type="number" min="0" max="9" value="<?php echo htmlspecialchars($r['num'],ENT_QUOTES, 'UTF-8') ?>">個</td>
+            <td name="subtotal"><?php echo htmlspecialchars($r['num'] * $r['price'],ENT_QUOTES, 'UTF-8') ?>円</td>
+            <td><input type="hidden" name="id[]" value="<?php echo htmlspecialchars($r['id'], ENT_QUOTES, 'UTF-8'); ?>"></td>
+        </tr>
+        <?php endforeach ?>
+    </table>
 
-<h2 >合計金額</h2>   
-<h3 id="sum"><?php echo htmlspecialchars($sum,ENT_QUOTES, UF-8) ?>円</h3>
-
-
-
+    <h2 >合計金額</h2>   
+    <h3 id="sum"><?php echo htmlspecialchars($sum,ENT_QUOTES, UF-8) ?>円</h3>
+    <p><input type='submit' name="submit" value='注文'></p>
+</form>
+    
 <a href="cart_empty.php">カートを空にする</a>　
 <a href="index.php" class="to_index">商品一覧へ戻る</a>
 
